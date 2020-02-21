@@ -11,11 +11,9 @@ This README would normally document whatever steps are necessary to get your app
 ### How do I get set up? ###
 
 ### Summary of set up:- ###
-  -> Download the source code
-  -> Setup using android studio
+  *  Download the source code
+  *  Setup using android studio
 
-Delivery
-App will fetch data from Api and show it in list and on item click will show location on google map
 
 ### PreRequisites ###
 * Android Studio: 3.4.2 or above
