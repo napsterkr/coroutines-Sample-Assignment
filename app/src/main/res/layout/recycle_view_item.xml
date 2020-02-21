@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+            name="itemViewModel"
+            type="com.example.myassignment.dataModel.ToDoResponseBean" />
+
+        <variable
+            name="itemClickListener"
+            type="com.example.myassignment.interfaces.OnToDoItemClickListner" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:elevation="5dp"
+        android:onClick="@{()->itemClickListener.termsAndConditionsOnItemClick(itemViewModel)}"
+        android:orientation="vertical"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_launcher_round"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_image"
+                android:padding="5dp"
+                android:text="@{itemViewModel.title}"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Hello World"/>
+
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_toRightOf="@+id/iv_image"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:text="@{String.valueOf(itemViewModel.completed)}"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

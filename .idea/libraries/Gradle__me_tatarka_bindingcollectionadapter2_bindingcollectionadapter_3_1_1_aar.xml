@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:3.1.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71052667514953a651a59f54d99eb708/bindingcollectionadapter-3.1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/71052667514953a651a59f54d99eb708/bindingcollectionadapter-3.1.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.tatarka.bindingcollectionadapter2/bindingcollectionadapter/3.1.1/70080bc9f175f16bb99556ee0b901f1e4d2929f0/bindingcollectionadapter-3.1.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.tatarka.bindingcollectionadapter2/bindingcollectionadapter/3.1.1/ef45871e9071495db07ed6808ad24e340317eb75/bindingcollectionadapter-3.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

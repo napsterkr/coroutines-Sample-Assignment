@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.myassignment.viewModel.HomeListActivityViewModel" />
+
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.HomeListActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:title="Todo List" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            visibleGoneBoolean="@{viewModel.progressBarLodingStatus.booleanValue()}"
+            tools:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:id="@+id/ll_reload_layout"
+            goneVisibleList="@{viewModel.toDoList.size()}"
+            goneVisibleLoaderVisible="@{viewModel.progressBarLodingStatus.booleanValue()}">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_image"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="Something went wrong"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_toRightOf="@+id/iv_image"
+                android:paddingLeft="5dp"
+                android:paddingBottom="5dp"
+                android:textAlignment="center"
+                android:text="Give it another try"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_reload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_title"
+                android:layout_toRightOf="@+id/iv_image"
+                android:padding="5dp"
+                android:textAlignment="center"
+                android:textColor="#FF17BAE4"
+                android:text="RELOAD"
+                android:onClick="@{()->viewModel.onReloadClick()}"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:padding="5dp"
+            visibleGoneList="@{viewModel.toDoList.size()}"
+            app:itemBinding="@{viewModel.toDoItemBinding}"
+            app:items="@{viewModel.toDoList}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/recycle_view_item"
+            tools:visibility="gone"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>
