@@ -10,23 +10,23 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 
-* Summary of set up:-
+### Summary of set up:- ###
   -> Download the source code
   -> Setup using android studio
 
 Delivery
 App will fetch data from Api and show it in list and on item click will show location on google map
 
-PreRequisites
-Android Studio: 3.4.2 or above
-Gradle: 5.1.1
+### PreRequisites ###
+* Android Studio: 3.4.2 or above
+* Gradle: 5.1.1
 
-Features
-MVVM – ViewModel, LiveData
+### Features ###
+* MVVM – ViewModel, LiveData
 
-Dependency Injection – Koin
-Retry for api fail
-Use Kotlin
-DataBinding
-Documentation, README file.
-UI and Unit test. –  Mockito 
+* Dependency Injection – Koin
+* Retry for api fail
+* Use Kotlin
+* DataBinding
+* Documentation, README file.
+* UI and Unit test. –  Mockito 
